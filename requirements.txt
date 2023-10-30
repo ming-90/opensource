@@ -1,3 +1,6 @@
 # api
 fastapi == 0.104.0
 uvicorn == 0.22.0
+
+# html parser
+beautifulsoup4 == 4.12.2

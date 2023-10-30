@@ -1,5 +1,6 @@
-from main import mingradio
+from main import Mingradio
 
-aa = mingradio()
+gr = Mingradio()
+gr.test('aa','aa')
 
-aa.launch()
+gr.launch()

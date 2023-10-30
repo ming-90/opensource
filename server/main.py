@@ -4,6 +4,7 @@ from fastapi.responses import HTMLResponse
 import uvicorn
 
 from createApis import Getclass, Postclass
+from htmlparser import insert_text
 
 app = FastAPI()
 
@@ -28,9 +29,14 @@ Getclass(app, "123")
 Postclass(app, "321", funcTest)
 Postclass(app, "asdf", funcTest)
 
-class mingradio:
+class Mingradio:
     def __init__(self):
-        print("Service start")
+        self.htmlString = ""
+
+    def test(self, string, id):
+        self.htmlString = "<html> <p id='tt'></p> </html>"
+        insert_text(self.htmlString, 'tt', 'aabbcc')
+
 
     @app.get("/", response_class=HTMLResponse)
     async def read_users():
