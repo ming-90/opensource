@@ -8,8 +8,9 @@ class Getclass:
             return f"test {string}"
 
 class Postclass:
-    def __init__(self, app, string):
+    def __init__(self, app, string, func):
         @app.post(f"/test{string}")
         def testapp():
             print(f"test {string}")
+            func()
             return f"test {string}"
